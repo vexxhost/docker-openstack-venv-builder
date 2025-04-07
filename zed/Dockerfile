@@ -1,6 +1,6 @@
 FROM ghcr.io/vexxhost/ubuntu:edge AS requirements
 # renovate: name=openstack/requirements repo=https://opendev.org/openstack/requirements.git branch=unmaintained/zed
-ARG REQUIREMENTS_GIT_REF=b4513973fdd1c3b43159fe0e02fa73d845a9c1ba
+ARG REQUIREMENTS_GIT_REF=1a3b0b7508e206c1863f5a700c1e359728010a61
 ADD https://opendev.org/openstack/requirements/raw/commit/${REQUIREMENTS_GIT_REF}/upper-constraints.txt /upper-constraints.txt
 RUN <<EOF sh -xe
 sed -i '/glance-store/d' /upper-constraints.txt
