@@ -1,6 +1,3 @@
-ARG REGISTRY
-ARG RELEASE
-
 FROM ghcr.io/vexxhost/ubuntu-cloud-archive:bobcat
 # renovate: name=openstack/requirements repo=https://opendev.org/openstack/requirements.git branch=stable/2023.2
 ARG REQUIREMENTS_GIT_REF=9042ccffadf3de68b5e2e0ee76e3d085842fd161
