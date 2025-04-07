@@ -5,22 +5,6 @@
     "docker:pinDigests",
     "helpers:pinGitHubActionDigestsToSemver"
   ],
-  "prHourlyLimit": 10,
-    "packageRules": [
-    {
-      "enabled": false,
-      "matchPackagePatterns": ["*"]
-    },
-    {
-      "enabled": true,
-      "matchDatasources": ["git-refs"]
-    },
-    {
-      "groupName": "openstack",
-      "matchDatasources": ["git-refs"],
-      "matchPackageNames": ["https://opendev.org/openstack/**"]
-    }
-  ],
   "customManagers": [
     {
       "customType": "regex",

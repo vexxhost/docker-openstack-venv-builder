@@ -22,13 +22,14 @@ RUN \
         lsb-release \
         openssh-client \
         python3 \
-        python3-dev \
-        python3-pip \
-        python3-venv
-RUN python3 -m venv --upgrade-deps --system-site-packages /var/lib/openstack
+        python3-dev
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 COPY --from=requirements --link /upper-constraints.txt /upper-constraints.txt
-RUN pip3 install \
-    --constraint /upper-constraints.txt \
+RUN \
+  --mount=type=cache,target=/root/.cache/uv \
+    uv venv --system-site-packages /var/lib/openstack && \
+    uv pip install \
+      --constraint /upper-constraints.txt \
         cryptography \
         pymysql \
         python-binary-memcached \
