@@ -1,4 +1,4 @@
-FROM ghcr.io/vexxhost/ubuntu-cloud-archive:zed AS requirements
+FROM ghcr.io/vexxhost/ubuntu:edge AS requirements
 # renovate: name=openstack/requirements repo=https://opendev.org/openstack/requirements.git branch=unmaintained/zed
 ARG REQUIREMENTS_GIT_REF=b4513973fdd1c3b43159fe0e02fa73d845a9c1ba
 ADD https://opendev.org/openstack/requirements/raw/commit/${REQUIREMENTS_GIT_REF}/upper-constraints.txt /upper-constraints.txt
