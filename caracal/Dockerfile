@@ -1,6 +1,3 @@
-ARG REGISTRY
-ARG RELEASE
-
 FROM ghcr.io/vexxhost/ubuntu-cloud-archive:caracal
 # renovate: name=openstack/requirements repo=https://opendev.org/openstack/requirements.git branch=stable/2024.1
 ARG REQUIREMENTS_GIT_REF=c1cde0f897da8c355d03eacda5cf3b610fe75e2c
