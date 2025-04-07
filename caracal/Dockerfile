@@ -4,8 +4,7 @@ ARG RELEASE
 FROM ghcr.io/vexxhost/ubuntu-cloud-archive:caracal
 # renovate: name=openstack/requirements repo=https://opendev.org/openstack/requirements.git branch=stable/2024.1
 ARG REQUIREMENTS_GIT_REF=c1cde0f897da8c355d03eacda5cf3b610fe75e2c
-ADD --keep-git-dir=true https://opendev.org/openstack/requirements.git#${REQUIREMENTS_GIT_REF} /src/requirements
-RUN cp /src/requirements/upper-constraints.txt /upper-constraints.txt
+ADD https://opendev.org/openstack/requirements/raw/commit/${REQUIREMENTS_GIT_REF}/upper-constraints.txt /upper-constraints.txt
 RUN <<EOF sh -xe
 sed -i '/glance-store/d' /upper-constraints.txt
 sed -i '/horizon/d' /upper-constraints.txt
