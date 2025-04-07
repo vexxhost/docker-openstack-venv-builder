@@ -18,6 +18,7 @@ jobs:
           - antelope
           - bobcat
           - caracal
+          - dalmatian
     steps:
       - uses: vexxhost/github-actions/scan-image@main
         with:

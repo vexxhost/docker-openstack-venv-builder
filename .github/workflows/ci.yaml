@@ -24,6 +24,7 @@ jobs:
           - antelope
           - bobcat
           - caracal
+          - dalmatian
     with:
       context: ${{ matrix.release }}
       image-ref: ghcr.io/${{ github.repository_owner }}/openstack-venv-builder
