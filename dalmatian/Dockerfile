@@ -5,7 +5,6 @@ ADD https://opendev.org/openstack/requirements/raw/commit/${REQUIREMENTS_GIT_REF
 RUN <<EOF sh -xe
 sed -i '/glance-store/d' /upper-constraints.txt
 sed -i '/horizon/d' /upper-constraints.txt
-sed -i 's/PyMySQL=.*/PyMySQL===1.1.1/g' /upper-constraints.txt
 EOF
 
 FROM ghcr.io/vexxhost/python-base:caracal@sha256:ebc288c9458780b7861ad3e02adc4d1cb39a5801e39a1bd6d27a17d954fdfa51
