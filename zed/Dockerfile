@@ -23,7 +23,7 @@ RUN \
         openssh-client \
         python3 \
         python3-dev
-COPY --from=ghcr.io/astral-sh/uv:latest@sha256:515b886e8eb99bcf9278776d8ea41eb4553a794195ef5803aa7ca6258653100d /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:latest@sha256:0b6dc79013b689f3bc0cbf12807cb1c901beaafe80f2ee10a1d76aa3842afb92 /uv /uvx /bin/
 COPY --from=requirements --link /upper-constraints.txt /upper-constraints.txt
 RUN \
   --mount=type=cache,target=/root/.cache/uv \
