@@ -3,6 +3,7 @@
   "extends": [
     "config:recommended",
     "docker:pinDigests",
+    "group:allDigest",
     "helpers:pinGitHubActionDigestsToSemver"
   ],
   "customManagers": [
