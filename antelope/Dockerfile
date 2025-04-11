@@ -8,7 +8,7 @@ sed -i '/horizon/d' /upper-constraints.txt
 sed -i 's/PyMySQL=.*/PyMySQL===1.1.1/g' /upper-constraints.txt
 EOF
 
-FROM ghcr.io/vexxhost/python-base:antelope@sha256:b354c8cf861e7ad61858293ef9659fe7d6e8aea9ca84f2a4a6ca0a35388a912b
+FROM ghcr.io/vexxhost/python-base:antelope@sha256:d1f4701ec14bbcb88c5848890711ca4a814ba0b21ba6d3b18b8a445968cefdc4
 RUN \
   --mount=type=cache,target=/var/cache/apt,sharing=locked \
   --mount=type=cache,target=/var/lib/apt,sharing=locked \
