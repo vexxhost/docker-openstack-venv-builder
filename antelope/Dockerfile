@@ -1,4 +1,4 @@
-FROM ghcr.io/vexxhost/ubuntu:edge@sha256:5569d9acb4dadc1e88e9c83efc44c131a648894ec3d3335e85e3ae526861e1bd AS requirements
+FROM ghcr.io/vexxhost/ubuntu:edge@sha256:42ad7fa6cc255d5c4212d49f9d3193a6448ce8acfe0937738b5753a2c8159a7a AS requirements
 # renovate: name=openstack/requirements repo=https://opendev.org/openstack/requirements.git branch=unmaintained/2023.1
 ARG REQUIREMENTS_GIT_REF=ef416fe896ec8e57248191af2917f13d2bf06479
 ADD https://opendev.org/openstack/requirements/raw/commit/${REQUIREMENTS_GIT_REF}/upper-constraints.txt /upper-constraints.txt
