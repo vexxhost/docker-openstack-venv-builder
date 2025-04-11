@@ -1,4 +1,4 @@
-FROM ghcr.io/vexxhost/ubuntu:edge@sha256:5569d9acb4dadc1e88e9c83efc44c131a648894ec3d3335e85e3ae526861e1bd AS requirements
+FROM ghcr.io/vexxhost/ubuntu:edge@sha256:42ad7fa6cc255d5c4212d49f9d3193a6448ce8acfe0937738b5753a2c8159a7a AS requirements
 # renovate: name=openstack/requirements repo=https://opendev.org/openstack/requirements.git branch=stable/2024.2
 ARG REQUIREMENTS_GIT_REF=3a697f8e7a691db0c0a8cef883df130901338182
 ADD https://opendev.org/openstack/requirements/raw/commit/${REQUIREMENTS_GIT_REF}/upper-constraints.txt /upper-constraints.txt
@@ -7,7 +7,7 @@ sed -i '/glance-store/d' /upper-constraints.txt
 sed -i '/horizon/d' /upper-constraints.txt
 EOF
 
-FROM ghcr.io/vexxhost/python-base:caracal@sha256:ebc288c9458780b7861ad3e02adc4d1cb39a5801e39a1bd6d27a17d954fdfa51
+FROM ghcr.io/vexxhost/python-base:caracal@sha256:a723b028a3fb4f49fb4b0522240d04333f256e2e618c2fbdd62b6b4b047eb677
 RUN \
   --mount=type=cache,target=/var/cache/apt,sharing=locked \
   --mount=type=cache,target=/var/lib/apt,sharing=locked \
@@ -23,7 +23,7 @@ RUN \
         openssh-client \
         python3 \
         python3-dev
-COPY --from=ghcr.io/astral-sh/uv:latest@sha256:0b6dc79013b689f3bc0cbf12807cb1c901beaafe80f2ee10a1d76aa3842afb92 /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:latest@sha256:3362a526af7eca2fcd8604e6a07e873fb6e4286d8837cb753503558ce1213664 /uv /uvx /bin/
 COPY --from=requirements --link /upper-constraints.txt /upper-constraints.txt
 RUN \
   --mount=type=cache,target=/root/.cache/uv \
