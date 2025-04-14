@@ -5,7 +5,7 @@ ADD https://opendev.org/openstack/requirements/raw/commit/${REQUIREMENTS_GIT_REF
 RUN <<EOF sh -xe
 sed -i '/glance-store/d' /upper-constraints.txt
 sed -i '/horizon/d' /upper-constraints.txt
-sed -i 's/cryptography=.*/cryptography===41.0.2/g' /upper-constraints.txt
+sed -i 's/cryptography=.*/cryptography===42.0.4/g' /upper-constraints.txt
 sed -i 's/PyMySQL=.*/PyMySQL===1.1.1/g' /upper-constraints.txt
 EOF
 
