@@ -16,7 +16,6 @@ apt-get install -qq -y --no-install-recommends \
     git \
     libldap2-dev \
     libpcre3-dev \
-    librdkafka-dev \
     libsasl2-dev \
     libssl-dev \
     lsb-release \
@@ -32,7 +31,6 @@ RUN <<EOF bash -xe
 uv venv --system-site-packages /var/lib/openstack
 uv pip install \
     --constraint /upper-constraints.txt \
-        confluent-kafka \
         cryptography \
         pymysql \
         python-binary-memcached \
