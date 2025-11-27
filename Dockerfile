@@ -25,7 +25,7 @@ apt-get install -qq -y --no-install-recommends \
 apt-get clean
 rm -rf /var/lib/apt/lists/*
 EOF
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:latest@sha256:f07d1bf7b1fb4b983eed2b31320e25a2a76625bdf83d5ff0208fe105d4d8d2f5 /uv /uvx /bin/
 COPY --from=upper-constraints --link /upper-constraints.txt /upper-constraints.txt
 RUN <<EOF bash -xe
 uv venv --system-site-packages /var/lib/openstack
