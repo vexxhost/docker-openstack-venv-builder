@@ -13,10 +13,11 @@ RUN <<EOF bash -xe
 apt-get update -qq
 apt-get install -qq -y --no-install-recommends \
     build-essential \
+    curl \
     git \
+    gnupg \
     libldap2-dev \
     libpcre3-dev \
-    librdkafka-dev \
     libsasl2-dev \
     libssl-dev \
     lsb-release \
@@ -26,6 +27,12 @@ apt-get install -qq -y --no-install-recommends \
 apt-get clean
 rm -rf /var/lib/apt/lists/*
 EOF
+RUN curl -sL https://packages.confluent.io/clients/deb/archive.key | apt-key add - && \
+    echo "deb https://packages.confluent.io/clients/deb/ jammy main" > /etc/apt/sources.list.d/confluent.list && \
+    apt-get update -qq && \
+    apt-get install -qq -y --no-install-recommends librdkafka-dev && \
+    apt-get clean && \
+    rm -rf /etc/apt/sources.list.d/confluent.list /var/lib/apt/lists/*
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 COPY --from=upper-constraints --link /upper-constraints.txt /upper-constraints.txt
 RUN <<EOF bash -xe
