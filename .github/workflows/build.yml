@@ -19,8 +19,7 @@ jobs:
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@main
         with:
           repository: openstack/requirements
-          # renovate: name=openstack/requirements repo=https://github.com/openstack/requirements.git branch=master
-          ref: d953bdbff8c1357447e53e4230e88949745fa395
+          ref: d953bdbff8c1357447e53e4230e88949745fa395 # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/build-image@main
         with:
