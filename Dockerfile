@@ -1,9 +1,8 @@
 # SPDX-FileCopyrightText: © 2025 VEXXHOST, Inc.
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-FROM ghcr.io/vexxhost/python-base:2023.2@sha256:bddcab6ad70beb092dc9c67d799f8840fecd6bb1dcb6e7a07c62f8d46b817aa9 AS requirements
-ADD --keep-git-dir=true https://github.com/openstack/requirements.git#2023.2-eol /src/requirements
-RUN cp /src/requirements/upper-constraints.txt /upper-constraints.txt
+FROM ghcr.io/vexxhost/python-base:2023.2@sha256:bddcab6ad70beb092dc9c67d799f8840fecd6bb1dcb6e7a07c62f8d46b817aa9 AS upper-constraints
+COPY --from=requirements upper-constraints.txt /upper-constraints.txt
 RUN <<EOF sh -xe
 sed -i '/glance_store/d' /upper-constraints.txt
 sed -i '/horizon/d' /upper-constraints.txt
@@ -17,6 +16,7 @@ apt-get install -qq -y --no-install-recommends \
     git \
     libldap2-dev \
     libpcre3-dev \
+    librdkafka-dev \
     libsasl2-dev \
     libssl-dev \
     lsb-release \
@@ -27,7 +27,7 @@ apt-get clean
 rm -rf /var/lib/apt/lists/*
 EOF
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
-COPY --from=requirements --link /upper-constraints.txt /upper-constraints.txt
+COPY --from=upper-constraints --link /upper-constraints.txt /upper-constraints.txt
 RUN <<EOF bash -xe
 uv venv --system-site-packages /var/lib/openstack
 uv pip install \
