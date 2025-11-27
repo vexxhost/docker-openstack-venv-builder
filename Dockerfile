@@ -4,7 +4,7 @@
 FROM ghcr.io/vexxhost/python-base:2025.1@sha256:b20e1edd09c32a37494a52fd563ee0465e6b1c4aeb761fc2aaabe392de40a6b1 AS upper-constraints
 COPY --from=requirements upper-constraints.txt /upper-constraints.txt
 RUN <<EOF sh -xe
-sed -i '/glance-store/d' /upper-constraints.txt
+sed -i '/glance_store/d' /upper-constraints.txt
 sed -i '/horizon/d' /upper-constraints.txt
 EOF
 
