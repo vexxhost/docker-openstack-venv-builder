@@ -16,7 +16,13 @@ jobs:
       id-token: write
       packages: write
     steps:
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@main
+        with:
+          repository: openstack/requirements
+          ref: ff29e00bc479f08cd603192157318604cc6c20ce # unmaintained/zed
+
       - uses: vexxhost/docker-atmosphere/.github/actions/build-image@main
         with:
           image-name: openstack-venv-builder
+          build-contexts: requirements=openstack/requirements
           push: ${{ github.event_name != 'pull_request' }}
