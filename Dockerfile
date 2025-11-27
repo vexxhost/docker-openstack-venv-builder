@@ -19,6 +19,7 @@ apt-get install -qq -y --no-install-recommends \
     git \
     libldap2-dev \
     libpcre3-dev \
+    librdkafka-dev \
     libsasl2-dev \
     libssl-dev \
     lsb-release \
