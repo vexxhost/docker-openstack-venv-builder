@@ -6,6 +6,8 @@ COPY --from=requirements upper-constraints.txt /upper-constraints.txt
 RUN <<EOF sh -xe
 sed -i '/glance_store/d' /upper-constraints.txt
 sed -i '/horizon/d' /upper-constraints.txt
+sed -i '/networking-generic-switch/d' /upper-constraints.txt
+sed -i '/tap-as-a-service/d' /upper-constraints.txt
 EOF
 
 FROM ghcr.io/vexxhost/python-base:2025.2@sha256:b80acfdef42cb205ae1795a30c76be8487d4600794c554682ffbabb20f8177e1
