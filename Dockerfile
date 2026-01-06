@@ -33,7 +33,7 @@ RUN curl -sL https://packages.confluent.io/clients/deb/archive.key | apt-key add
     apt-get install -qq -y --no-install-recommends librdkafka-dev && \
     apt-get clean && \
     rm -rf /etc/apt/sources.list.d/confluent.list /var/lib/apt/lists/*
-COPY --from=ghcr.io/astral-sh/uv:latest@sha256:15f68a476b768083505fe1dbfcc998344d0135f0ca1b8465c4760b323904f05a /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:latest@sha256:2320e6c239737dc73cccce393a8bb89eba2383d17018ee91a59773df802c20e6 /uv /uvx /bin/
 COPY --from=upper-constraints --link /upper-constraints.txt /upper-constraints.txt
 RUN <<EOF bash -xe
 uv venv --system-site-packages /var/lib/openstack
