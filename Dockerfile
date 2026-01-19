@@ -1,14 +1,14 @@
 # SPDX-FileCopyrightText: © 2025 VEXXHOST, Inc.
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-FROM ghcr.io/vexxhost/python-base:zed@sha256:292acf003d3de43bc933efadc4f26527427258b4e618c59cb2b1eb46a9119adb AS upper-constraints
+FROM ghcr.io/vexxhost/python-base:zed@sha256:06eb099e933ac2ec193163c3a6fa202f73a89671183a9bb7aa9cd5e4cd42aa01 AS upper-constraints
 COPY --from=requirements upper-constraints.txt /upper-constraints.txt
 RUN <<EOF sh -xe
 sed -i '/glance-store/d' /upper-constraints.txt
 sed -i '/horizon/d' /upper-constraints.txt
 EOF
 
-FROM ghcr.io/vexxhost/python-base:zed@sha256:292acf003d3de43bc933efadc4f26527427258b4e618c59cb2b1eb46a9119adb
+FROM ghcr.io/vexxhost/python-base:zed@sha256:06eb099e933ac2ec193163c3a6fa202f73a89671183a9bb7aa9cd5e4cd42aa01
 RUN <<EOF bash -xe
 apt-get update -qq
 apt-get install -qq -y --no-install-recommends \
