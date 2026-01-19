@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: © 2025 VEXXHOST, Inc.
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-FROM ghcr.io/vexxhost/python-base:2025.2@sha256:b80acfdef42cb205ae1795a30c76be8487d4600794c554682ffbabb20f8177e1 AS upper-constraints
+FROM ghcr.io/vexxhost/python-base:2025.2@sha256:116f29c8dd72f595a0a1b0189842d1f492bd9578291a7dfdcdde2a22d5777f8a AS upper-constraints
 COPY --from=requirements upper-constraints.txt /upper-constraints.txt
 RUN <<EOF sh -xe
 sed -i '/glance_store/d' /upper-constraints.txt
@@ -10,7 +10,7 @@ sed -i '/networking-generic-switch/d' /upper-constraints.txt
 sed -i '/tap-as-a-service/d' /upper-constraints.txt
 EOF
 
-FROM ghcr.io/vexxhost/python-base:2025.2@sha256:b80acfdef42cb205ae1795a30c76be8487d4600794c554682ffbabb20f8177e1
+FROM ghcr.io/vexxhost/python-base:2025.2@sha256:116f29c8dd72f595a0a1b0189842d1f492bd9578291a7dfdcdde2a22d5777f8a
 RUN <<EOF bash -xe
 apt-get update -qq
 apt-get install -qq -y --no-install-recommends \
