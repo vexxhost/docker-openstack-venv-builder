@@ -26,4 +26,12 @@ jobs:
         with:
           image-name: openstack-venv-builder
           build-contexts: requirements=openstack/requirements
+          build-args: FROM=ghcr.io/vexxhost/python-base:main@sha256:75385f32ee3538cefd9c6cbc5c940a5a7067ba8e41fbf6b34a3c0212fca3f596
+          push: ${{ github.event_name != 'pull_request' }}
+
+      - uses: vexxhost/docker-atmosphere/.github/actions/build-image@main
+        with:
+          image-name: debian-openstack-venv-builder
+          build-contexts: requirements=openstack/requirements
+          build-args: FROM=ghcr.io/vexxhost/debian-python-base:main@sha256:debian
           push: ${{ github.event_name != 'pull_request' }}

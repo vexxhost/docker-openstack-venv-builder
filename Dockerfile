@@ -1,7 +1,9 @@
 # SPDX-FileCopyrightText: © 2025 VEXXHOST, Inc.
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-FROM ghcr.io/vexxhost/python-base:main@sha256:75385f32ee3538cefd9c6cbc5c940a5a7067ba8e41fbf6b34a3c0212fca3f596 AS upper-constraints
+ARG FROM="python-base"
+
+FROM ${FROM} AS upper-constraints
 COPY --from=requirements upper-constraints.txt /upper-constraints.txt
 RUN <<EOF sh -xe
 sed -i '/glance_store/d' /upper-constraints.txt
@@ -10,14 +12,14 @@ sed -i '/networking-generic-switch/d' /upper-constraints.txt
 sed -i '/tap-as-a-service/d' /upper-constraints.txt
 EOF
 
-FROM ghcr.io/vexxhost/python-base:main@sha256:75385f32ee3538cefd9c6cbc5c940a5a7067ba8e41fbf6b34a3c0212fca3f596
+FROM ${FROM} AS debian-openstack-venv-builder
 RUN <<EOF bash -xe
 apt-get update -qq
 apt-get install -qq -y --no-install-recommends \
     build-essential \
     git \
     libldap2-dev \
-    libpcre3-dev \
+    libpcre2-dev \
     libsasl2-dev \
     libssl-dev \
     lsb-release \
