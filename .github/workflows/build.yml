@@ -20,7 +20,7 @@ jobs:
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@main
         with:
           repository: openstack/requirements
-          ref: 69fa32a192706e9048115d3814c55f97635f9398 # master
+          ref: 64a11e4ce95e23fd58bb90eb383c5971ee6cb20d # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/build-image@main
         with:
