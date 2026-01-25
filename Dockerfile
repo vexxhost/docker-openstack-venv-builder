@@ -13,7 +13,7 @@ EOF
 
 FROM ${FROM}
 RUN --mount=type=bind,source=bindep.txt,target=/bindep.txt \
-    --mount=type=bind,from=ghcr.io/vexxhost/build-utils:latest,source=/bin,target=/build \
+    --mount=type=bind,from=ghcr.io/vexxhost/build-utils:latest@sha256:79d7579c2300391cc9cdd9ca17b9031750a748fb84a87ebb1f1a920e1fcb4740,source=/bin,target=/build \
     /build/install-bindep-packages
 COPY --from=ghcr.io/astral-sh/uv:latest@sha256:9a23023be68b2ed09750ae636228e903a54a05ea56ed03a934d00fe9fbeded4b /uv /uvx /bin/
 COPY --from=upper-constraints --link /upper-constraints.txt /upper-constraints.txt
