@@ -15,10 +15,13 @@ EOF
 FROM ${FROM}
 RUN --mount=type=bind,source=bindep.txt,target=/bindep.txt \
     --mount=type=bind,from=ghcr.io/vexxhost/build-utils:latest,source=/bin,target=/build \
+    --mount=type=cache,target=/root/.cache/uv \
+    --mount=type=cache,target=/root/.local/share/uv \
     /build/install-bindep-packages
 COPY --from=ghcr.io/astral-sh/uv:latest@sha256:9a23023be68b2ed09750ae636228e903a54a05ea56ed03a934d00fe9fbeded4b /uv /uvx /bin/
 COPY --from=upper-constraints --link /upper-constraints.txt /upper-constraints.txt
-RUN <<EOF bash -xe
+RUN --mount=type=cache,target=/root/.cache/uv \
+    --mount=type=cache,target=/root/.local/share/uv <<EOF bash -xe
 uv venv --system-site-packages /var/lib/openstack
 uv pip install \
     --constraint /upper-constraints.txt \
