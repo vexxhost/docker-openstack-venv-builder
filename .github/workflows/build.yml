@@ -18,22 +18,22 @@ jobs:
         include:
           - name: ubuntu
             image-name: openstack-venv-builder-ubuntu
-            from: ghcr.io/vexxhost/python-base-ubuntu:2025.2
+            from: ghcr.io/vexxhost/python-base-ubuntu:2025.2@sha256:3da0256223101bf0c102e31ca97d2dc2ab328e914355501a8de6cd1b449231fb
           - name: ubuntu-cloud-archive
             image-name: openstack-venv-builder-ubuntu-cloud-archive
-            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:2025.2
+            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:2025.2@sha256:c151eadd63b75fb4d53d6c91ae12dae014097ba8a798e7f642958cf560e22d8b
           - name: ubuntu-cloud-archive-legacy
             image-name: openstack-venv-builder
-            from: ghcr.io/vexxhost/python-base:2025.2@sha256:116f29c8dd72f595a0a1b0189842d1f492bd9578291a7dfdcdde2a22d5777f8a
+            from: ghcr.io/vexxhost/python-base:2025.2@sha256:aa7f18cfa682c9a654e14c9526d6d3bdd042e304af2c85294c013f5f95506bdc
           - name: debian
             image-name: openstack-venv-builder-debian
-            from: ghcr.io/vexxhost/python-base-debian:2025.2
+            from: ghcr.io/vexxhost/python-base-debian:2025.2@sha256:01c8fcf45d908b36dba7740061edd570bb9dfc3069eeb96e168c24b67921ebc8
           - name: rockylinux
             image-name: openstack-venv-builder-rockylinux
-            from: ghcr.io/vexxhost/python-base-rockylinux:2025.2
+            from: ghcr.io/vexxhost/python-base-rockylinux:2025.2@sha256:22831f9a18c32e1fc4903da041c1aea564df948d1a193da2a1776c3a2f6bbed5
           - name: almalinux
             image-name: openstack-venv-builder-almalinux
-            from: ghcr.io/vexxhost/python-base-almalinux:2025.2
+            from: ghcr.io/vexxhost/python-base-almalinux:2025.2@sha256:202cced26c568280a55b85e894a63622d70c04e3e5c9d2773b6c6905c7f31570
     permissions:
       contents: read
       id-token: write
