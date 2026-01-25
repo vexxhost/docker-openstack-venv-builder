@@ -10,7 +10,30 @@ on:
 
 jobs:
   image:
+    name: ${{ matrix.name }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: ubuntu
+            image-name: openstack-venv-builder-ubuntu
+            from: ghcr.io/vexxhost/python-base-ubuntu:main
+          - name: ubuntu-cloud-archive
+            image-name: openstack-venv-builder-ubuntu-cloud-archive
+            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:main
+          - name: ubuntu-cloud-archive-legacy
+            image-name: openstack-venv-builder
+            from: ghcr.io/vexxhost/python-base:main
+          - name: debian
+            image-name: openstack-venv-builder-debian
+            from: ghcr.io/vexxhost/python-base-debian:main
+          - name: rockylinux
+            image-name: openstack-venv-builder-rockylinux
+            from: ghcr.io/vexxhost/python-base-rockylinux:main
+          - name: almalinux
+            image-name: openstack-venv-builder-almalinux
+            from: ghcr.io/vexxhost/python-base-almalinux:main
     permissions:
       contents: read
       id-token: write
@@ -24,6 +47,7 @@ jobs:
 
       - uses: vexxhost/docker-atmosphere/.github/actions/build-image@main
         with:
-          image-name: openstack-venv-builder
+          image-name: ${{ matrix.image-name }}
           build-contexts: requirements=openstack/requirements
+          build-args: FROM=${{ matrix.from }}
           push: ${{ github.event_name != 'pull_request' }}
