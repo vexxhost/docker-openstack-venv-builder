@@ -10,7 +10,30 @@ on:
 
 jobs:
   image:
+    name: ${{ matrix.name }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: ubuntu
+            image-name: openstack-venv-builder-ubuntu
+            from: ghcr.io/vexxhost/python-base-ubuntu:2023.1@sha256:74666768942ad83dd310774a6f8c9b3894a6e962c906da85245a100c9b759d4c
+          - name: ubuntu-cloud-archive
+            image-name: openstack-venv-builder-ubuntu-cloud-archive
+            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:2023.1@sha256:94b259606f07782b5d59ae26c46b082abaa40c4753274a1cd8d51b5de0086803
+          - name: ubuntu-cloud-archive-legacy
+            image-name: openstack-venv-builder
+            from: ghcr.io/vexxhost/python-base:2023.1@sha256:e68ff156262cfc09e264f03741644bb587c3c3f00ae83f9d7ceef793ab3aed46
+          - name: debian
+            image-name: openstack-venv-builder-debian
+            from: ghcr.io/vexxhost/python-base-debian:2023.1@sha256:0034662d8dd75f6f6d65470b44ce20731d7623543264910d1a73f1004c2c7b5e
+          - name: rockylinux
+            image-name: openstack-venv-builder-rockylinux
+            from: ghcr.io/vexxhost/python-base-rockylinux:2023.1@sha256:0c60255b93bf63a4e20602ca346466eab6db0e4372310449dd72e1ecae4269ee
+          - name: almalinux
+            image-name: openstack-venv-builder-almalinux
+            from: ghcr.io/vexxhost/python-base-almalinux:2023.1@sha256:1d990944b2015315c212baa7b4d0a644e43ed10cf8acd0cf066cb64f1aaaa2ff
     permissions:
       contents: read
       id-token: write
@@ -24,6 +47,7 @@ jobs:
 
       - uses: vexxhost/docker-atmosphere/.github/actions/build-image@main
         with:
-          image-name: openstack-venv-builder
+          image-name: ${{ matrix.image-name }}
           build-contexts: requirements=openstack/requirements
+          build-args: FROM=${{ matrix.from }}
           push: ${{ github.event_name != 'pull_request' }}
