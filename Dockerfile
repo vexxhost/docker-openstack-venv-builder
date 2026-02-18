@@ -8,6 +8,7 @@ COPY --from=requirements upper-constraints.txt /upper-constraints.txt
 RUN <<EOF sh -xe
 sed -i '/glance-store/d' /upper-constraints.txt
 sed -i '/horizon/d' /upper-constraints.txt
+sed -i 's/^keystonemiddleware===.*/keystonemiddleware===10.8.0/' /upper-constraints.txt
 sed -i 's/^PasteDeploy===.*/PasteDeploy===3.0.1/' /upper-constraints.txt
 EOF
 
