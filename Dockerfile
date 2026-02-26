@@ -10,6 +10,7 @@ sed -i '/glance-store/d' /upper-constraints.txt
 sed -i '/horizon/d' /upper-constraints.txt
 sed -i '/networking-generic-switch/d' /upper-constraints.txt
 sed -i 's/keystonemiddleware===.*/keystonemiddleware===10.8.0/' /upper-constraints.txt
+sed -i 's/^setuptools===.*/setuptools===81.0.0/' /upper-constraints.txt
 EOF
 
 FROM ${FROM}
