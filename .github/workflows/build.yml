@@ -33,7 +33,7 @@ jobs:
             from: ghcr.io/vexxhost/python-base-debian:main@sha256:797ed1a9d85d5e556d0cd8dd69df69f482c0076dcbf9c074dd0349015a0533ae
           - name: rockylinux
             image-name: openstack-venv-builder-rockylinux
-            from: ghcr.io/vexxhost/python-base-rockylinux:main@sha256:74a31c693960e2d2bdb0b56dc9a62615f5d9cc4a7129b86bce09adc8c9840697
+            from: rockylinux/rockylinux:10@sha256:f4da504c18e7aced902f4f728cde787cd9d9b817bc639fe171026d18364dca6c
           - name: almalinux
             image-name: openstack-venv-builder-almalinux
             from: ghcr.io/vexxhost/python-base-almalinux:main@sha256:3d3d562d7bd010e1f2799b37c7cd55c50bf09de15eb85613e9699976083d3182
