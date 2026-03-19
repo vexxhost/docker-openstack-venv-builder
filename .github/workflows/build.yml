@@ -30,13 +30,13 @@ jobs:
             from: ghcr.io/vexxhost/python-base:main@sha256:cbab7216dad0bc8f72d88227a21c6f8bf32050b259e97b28cc4efb61ecf6594a
           - name: debian
             image-name: openstack-venv-builder-debian
-            from: ghcr.io/vexxhost/python-base-debian:main@sha256:dc60bd32ed0b823e07c8b9ed7c26e86df5c86a00d7f9781a2a90d3572ed78c58
+            from: ghcr.io/vexxhost/python-base-debian:main@sha256:26c580085d78636631aedffc1f21b26b125ebadb6e96951bdd0998210748106b
           - name: rockylinux
             image-name: openstack-venv-builder-rockylinux
             from: ghcr.io/vexxhost/python-base-rockylinux:main@sha256:696527bbdfdb6acaa81a4e0dc07abc798bf6aefc28fcae4583166575ba2a5c3c
           - name: almalinux
             image-name: openstack-venv-builder-almalinux
-            from: ghcr.io/vexxhost/python-base-almalinux:main@sha256:4daf757aff49dea48a5029776b4d1cb6d3d005c29af73f74ac5801007f27c97d
+            from: ghcr.io/vexxhost/python-base-almalinux:main@sha256:c04da46fb310d19471f6638310bbe236d945d91e173d26b7b675f275c9ad6a0e
     permissions:
       contents: read
       id-token: write
