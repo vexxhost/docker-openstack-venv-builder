@@ -18,22 +18,22 @@ jobs:
         include:
           - name: ubuntu
             image-name: openstack-venv-builder-ubuntu
-            from: ghcr.io/vexxhost/python-base-ubuntu:zed@sha256:f590fb736b98dbf4ecdecd418610bf4b52fe42c9d5b9c9676fba586c4f816421
+            from: ghcr.io/vexxhost/python-base-ubuntu:zed@sha256:af6b1089b09f4bd3bab02e0766fae8426a79611d2c3c56478f193dd6aa0a6701
           - name: ubuntu-cloud-archive
             image-name: openstack-venv-builder-ubuntu-cloud-archive
             from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:zed@sha256:671ab9783a0ec4c58abed0a275e93311117450a8b0f94f0851ab300dfd25799f
           - name: ubuntu-cloud-archive-legacy
             image-name: openstack-venv-builder
-            from: ghcr.io/vexxhost/python-base:zed@sha256:562934217adf8855b7457745c059b43c672a2f0e583723a8bcb0e9ba4b78df5a
+            from: ghcr.io/vexxhost/python-base:zed@sha256:9526003e42f33deba2f7f56509375b8c4079daa39a56e2e4d2b376ec935d454f
           - name: debian
             image-name: openstack-venv-builder-debian
-            from: ghcr.io/vexxhost/python-base-debian:zed@sha256:8ef718b35306c734d553861ab1a11b29a24dec9a7a308f92a155594e291fd2af
+            from: ghcr.io/vexxhost/python-base-debian:zed@sha256:60380a5764db6285c71b7916e116c2af8cdec3fa9bb04abc2c569dbef38bf817
           - name: rockylinux
             image-name: openstack-venv-builder-rockylinux
-            from: ghcr.io/vexxhost/python-base-rockylinux:zed@sha256:9487ae52df0a473a7d13dfbd7f8f3c57bcf58dec18ad4eef7bc9dc40c63c4d7a
+            from: ghcr.io/vexxhost/python-base-rockylinux:zed@sha256:db1f29c9c116137afc6003e45a1574e1e7ece77c6f340a7ff659a67c01225639
           - name: almalinux
             image-name: openstack-venv-builder-almalinux
-            from: ghcr.io/vexxhost/python-base-almalinux:zed@sha256:5350d7b2c37cdf68a9053b8078d09f16e30eb3c6910c02a475daa0ad100f8749
+            from: ghcr.io/vexxhost/python-base-almalinux:zed@sha256:8f3e4861eaa9cbd556888e9f8a446be9acab026fdf80861f80280cf7ed082578
     permissions:
       contents: read
       id-token: write
