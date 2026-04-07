@@ -21,19 +21,19 @@ jobs:
             from: ghcr.io/vexxhost/python-base-ubuntu:2023.1@sha256:db9e066e1f7ce1a8e2bc8f8278ebf74dcc15d973f3b33f4dfbfe5e817e3c111d
           - name: ubuntu-cloud-archive
             image-name: openstack-venv-builder-ubuntu-cloud-archive
-            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:2023.1@sha256:417513ec8af38132f7970986755568f5e80726f55db2fe490cec8b6d675430d3
+            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:2023.1@sha256:86de9294cc0dd36895e54995af815bb2d6bda8b610dcec1d49a83c482aad6d6d
           - name: ubuntu-cloud-archive-legacy
             image-name: openstack-venv-builder
-            from: ghcr.io/vexxhost/python-base:2023.1@sha256:946497f93739d2cdf06473d6ed348f4a28a2c4669619715eb07e0e56336aab0e
+            from: ghcr.io/vexxhost/python-base:2023.1@sha256:12e10fb31d8a65490d51713f6a12471458e4a5ddce46cd0099ecaa33b241a247
           - name: debian
             image-name: openstack-venv-builder-debian
-            from: ghcr.io/vexxhost/python-base-debian:2023.1@sha256:bdaf5a3a9f909c199699ed84bd4cf042082ec00bf7cd4d138cda2e13cb33542d
+            from: ghcr.io/vexxhost/python-base-debian:2023.1@sha256:86d4c84b2fb2bf743d61c6d77f6438df490c81683cfd0462af609bf90f261114
           - name: rockylinux
             image-name: openstack-venv-builder-rockylinux
-            from: ghcr.io/vexxhost/python-base-rockylinux:2023.1@sha256:4027eb49f0ca8399fdbae3aa598defc581f60145832dedc359d3d74108dfd956
+            from: ghcr.io/vexxhost/python-base-rockylinux:2023.1@sha256:293c34b4951f0ef254c8a1676cf9ca1fdb90aa561d760826fcd27c5ebf02cab2
           - name: almalinux
             image-name: openstack-venv-builder-almalinux
-            from: ghcr.io/vexxhost/python-base-almalinux:2023.1@sha256:c163f595c45e4438f5b999eebc2ddd0026be2fe157f1a08b414f3a85ad32dcb0
+            from: ghcr.io/vexxhost/python-base-almalinux:2023.1@sha256:f190e898decf27fef0d504f14a94f156c976bb1aa06eddbbe1c5b60e77d4639d
     permissions:
       contents: read
       id-token: write
