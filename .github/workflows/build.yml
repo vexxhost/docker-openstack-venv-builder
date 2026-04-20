@@ -18,22 +18,22 @@ jobs:
         include:
           - name: ubuntu
             image-name: openstack-venv-builder-ubuntu
-            from: ghcr.io/vexxhost/python-base-ubuntu:2024.2@sha256:9609e30cdce01b040a89d3018b566c8c887cca2544e39c6d430098869624ec9e
+            from: ghcr.io/vexxhost/python-base-ubuntu:2024.2@sha256:a9ed5daae41b794545bbd6f0170aa3787dcc936f39a95fa6f084ff2f42603134
           - name: ubuntu-cloud-archive
             image-name: openstack-venv-builder-ubuntu-cloud-archive
-            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:2024.2@sha256:599308a9a539b48102836050c65fc9cecd09374b4fe2bd011be675e2f639b2fa
+            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:2024.2@sha256:e5316d3e4231f9c65cada8f8e0741d1be329a891f3d405f297fee0010bef28de
           - name: ubuntu-cloud-archive-legacy
             image-name: openstack-venv-builder
-            from: ghcr.io/vexxhost/python-base:2024.2@sha256:30ea7e408815efcc29df2764703d3b6256c2b7ee0f31b1e290cb34ddf6f44694
+            from: ghcr.io/vexxhost/python-base:2024.2@sha256:14c149e0b7401e1eb4180e94b653674ed6011b387ca7d2ada6d81bf90109d8bd
           - name: debian
             image-name: openstack-venv-builder-debian
-            from: ghcr.io/vexxhost/python-base-debian:2024.2@sha256:d34549649ccd5ea4e394f0b8789e61f203959d8808c8a903f6e1f5e4301bbd26
+            from: ghcr.io/vexxhost/python-base-debian:2024.2@sha256:9fb3c9aefdd2c959d1809f5aebbaf0b42c7ec820049995509586029ae53eb4ca
           - name: rockylinux
             image-name: openstack-venv-builder-rockylinux
-            from: ghcr.io/vexxhost/python-base-rockylinux:2024.2@sha256:4b4a3191b90ed39d2f9e7a27720ed02ec3f49fbaa6dff032c6928ae0a72e5766
+            from: ghcr.io/vexxhost/python-base-rockylinux:2024.2@sha256:5bf1f1540aac78f18c5f2972bdcd02d3797d3b08df0eed56053c7f81060a5ca2
           - name: almalinux
             image-name: openstack-venv-builder-almalinux
-            from: ghcr.io/vexxhost/python-base-almalinux:2024.2@sha256:12b708fbb578c5e7bf2e32cc03bee7ca65a59278817e227a2ca60ecea5a5eb99
+            from: ghcr.io/vexxhost/python-base-almalinux:2024.2@sha256:7ad68d29cce2db824f8002c188d0bbe265ec85d9f8add9a462369f00225e54f6
     permissions:
       contents: read
       id-token: write
