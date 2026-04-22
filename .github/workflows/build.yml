@@ -18,22 +18,22 @@ jobs:
         include:
           - name: ubuntu
             image-name: openstack-venv-builder-ubuntu
-            from: ghcr.io/vexxhost/python-base-ubuntu:zed@sha256:8c0a45a1b61078285535718f3078cea149dc3810e6ffbfee3d3c632b88042c85
+            from: ghcr.io/vexxhost/python-base-ubuntu:zed@sha256:bdceefde158934ec780f13c2e712159272618a0c6bae61b3d1bec6788c18cc29
           - name: ubuntu-cloud-archive
             image-name: openstack-venv-builder-ubuntu-cloud-archive
-            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:zed@sha256:81fad82bd9b35b6dcd377f289c922e8bcc74173882e2f182da3460a5b67cdbd7
+            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:zed@sha256:0ace5f10fa3bcb452c1a1d40c4898f9306ba74dd3bc020cf5d865b322609618c
           - name: ubuntu-cloud-archive-legacy
             image-name: openstack-venv-builder
-            from: ghcr.io/vexxhost/python-base:zed@sha256:2ea15aff7e6c2224434dfbda2f3199326150befc7d256704ec89629993d53dcc
+            from: ghcr.io/vexxhost/python-base:zed@sha256:404b2f8a6147eab2bb3166010a5c415916e445fb5216cf174e966dc26611214c
           - name: debian
             image-name: openstack-venv-builder-debian
-            from: ghcr.io/vexxhost/python-base-debian:zed@sha256:2c30043a659574ea24f506dd6fcb05ccabbe60aef905cb6aabba519f5698cd48
+            from: ghcr.io/vexxhost/python-base-debian:zed@sha256:568c4337862b4845bd2f978a1c155a08a44bc8e39ca0979a4f9ee3224de57eda
           - name: rockylinux
             image-name: openstack-venv-builder-rockylinux
             from: ghcr.io/vexxhost/python-base-rockylinux:zed@sha256:63bef2830286217fc9012e11c4aedb37fdb0f42cc7a1bca6cbdf1ea23d768c48
           - name: almalinux
             image-name: openstack-venv-builder-almalinux
-            from: ghcr.io/vexxhost/python-base-almalinux:zed@sha256:af992ce727d02949c766069224efbeb32c47e1421727cfb6aee2d8d4871b4b41
+            from: ghcr.io/vexxhost/python-base-almalinux:zed@sha256:05b73cbdb43db3e79dac54ec492e8a776b59ee1bde902220c9af2daa874581a9
     permissions:
       contents: read
       id-token: write
