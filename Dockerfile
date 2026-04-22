@@ -10,6 +10,7 @@ sed -i '/glance_store/d' /upper-constraints.txt
 sed -i '/horizon/d' /upper-constraints.txt
 sed -i '/networking-generic-switch/d' /upper-constraints.txt
 sed -i '/tap-as-a-service/d' /upper-constraints.txt
+sed -i 's/^XStatic-Angular-Schema-Form===.*/XStatic-Angular-Schema-Form===0.8.13.1/' /upper-constraints.txt
 EOF
 
 FROM ${FROM}
