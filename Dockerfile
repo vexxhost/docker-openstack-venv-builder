@@ -16,7 +16,7 @@ FROM ${FROM}
 RUN --mount=type=bind,source=bindep.txt,target=/bindep.txt \
     --mount=type=bind,from=ghcr.io/vexxhost/build-utils:latest@sha256:e9473fc5185c82745d83facbc8c869c7797bd5e2ac9ca72f8c930fc0448e2b43,source=/bin,target=/build \
     /build/install-bindep-packages
-COPY --from=ghcr.io/astral-sh/uv:latest@sha256:bca7f6959666f3524e0c42129f9d8bbcfb0c180d847f5187846b98ff06125ead /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:latest@sha256:798712e57f879c5393777cbda2bb309b29fcdeb0532129d4b1c3125c5385975a /uv /uvx /bin/
 COPY --from=upper-constraints --link /upper-constraints.txt /upper-constraints.txt
 RUN <<EOF bash -xe
 uv venv --system-site-packages /var/lib/openstack
