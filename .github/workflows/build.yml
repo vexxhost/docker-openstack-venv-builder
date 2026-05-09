@@ -21,7 +21,7 @@ jobs:
             from: ghcr.io/vexxhost/python-base-ubuntu:zed@sha256:e157254e4bf2b008d6f34367e348cf00e7c6324dc7837bb5a4e67b30772cc9c4
           - name: ubuntu-cloud-archive
             image-name: openstack-venv-builder-ubuntu-cloud-archive
-            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:zed@sha256:dec411b33a2c32b45996bfac1730f1a49f201593946f7d5b587ca8a73384a08f
+            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:zed@sha256:6ecef3b57616f9c1729c9408dac7994083f5c30a690585478a6071d391c8d3e5
           - name: ubuntu-cloud-archive-legacy
             image-name: openstack-venv-builder
             from: ghcr.io/vexxhost/python-base:zed@sha256:5268d94561c2a21852902120b9b69364f8c7da6acb1b1839d0239397e096cec5
@@ -33,7 +33,7 @@ jobs:
             from: ghcr.io/vexxhost/python-base-rockylinux:zed@sha256:f1142dd5765a366086b330822e18ae7737d759bbaa24c15d83ff06dfc0be5675
           - name: almalinux
             image-name: openstack-venv-builder-almalinux
-            from: ghcr.io/vexxhost/python-base-almalinux:zed@sha256:b1c6e45832ab7bc8c67e83adc5120db33a369526e66afa5467f7de6ea0dabbc9
+            from: ghcr.io/vexxhost/python-base-almalinux:zed@sha256:ebb682e5bfc1ba39a23d41ab879a2eba753397d462ca1fe3568145feb6f10db5
     permissions:
       contents: read
       id-token: write
