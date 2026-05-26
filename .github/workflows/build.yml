@@ -18,22 +18,22 @@ jobs:
         include:
           - name: ubuntu
             image-name: openstack-venv-builder-ubuntu
-            from: ghcr.io/vexxhost/python-base-ubuntu:zed@sha256:5c70714102a622807cdd9bfdde654430ba54d33ef7bc2fa3cd6fd8835f74e348
+            from: ghcr.io/vexxhost/python-base-ubuntu:zed@sha256:f80469cdab1d4ef74f8db1fe1c0ec8f66ce320e158e093f022e0e2a10cb70465
           - name: ubuntu-cloud-archive
             image-name: openstack-venv-builder-ubuntu-cloud-archive
-            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:zed@sha256:1241af2104da35f6d66cda224dab103905a8f5b90c9deaa719c7e99a35e421c7
+            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:zed@sha256:d6f50e0ed84d6299d612fc1f2808b7109204ad99a8e4387010a73c132567e3cb
           - name: ubuntu-cloud-archive-legacy
             image-name: openstack-venv-builder
             from: ghcr.io/vexxhost/python-base:zed@sha256:e92b679c5a6b406c3155468715abfc9acbb3bc142477b3f4d44c45a906ed38ac
           - name: debian
             image-name: openstack-venv-builder-debian
-            from: ghcr.io/vexxhost/python-base-debian:zed@sha256:cc1e1e67b12ebb18c7b13d9f8853ebdd855c356f8a3f8278716c825560f7da7a
+            from: ghcr.io/vexxhost/python-base-debian:zed@sha256:f427e9e530bee04ebfe24636b84b718c3ed00eed46c0b8ca95cb86ea1187867c
           - name: rockylinux
             image-name: openstack-venv-builder-rockylinux
-            from: ghcr.io/vexxhost/python-base-rockylinux:zed@sha256:86e7b887ce94596870a359dd6296a17209af01b35cd2243e5742ca17f32dd02c
+            from: ghcr.io/vexxhost/python-base-rockylinux:zed@sha256:71d2212bc318b6590e59046f6816cab573c5d4ea33791eda4cfbd82cf662f4cc
           - name: almalinux
             image-name: openstack-venv-builder-almalinux
-            from: ghcr.io/vexxhost/python-base-almalinux:zed@sha256:5b941921e6ad2a2c9059b5ed74b166bd404f340c2d757db5fce177f425b2186d
+            from: ghcr.io/vexxhost/python-base-almalinux:zed@sha256:5f0d26decdf6ddaddeb36377767a29eb2fe7d91b3ae973fd5bc4fce179b4f2fd
     permissions:
       contents: read
       id-token: write
