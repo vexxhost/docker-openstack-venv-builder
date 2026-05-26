@@ -18,22 +18,22 @@ jobs:
         include:
           - name: ubuntu
             image-name: openstack-venv-builder-ubuntu
-            from: ghcr.io/vexxhost/python-base-ubuntu:2024.1@sha256:c18b9c8ae88a590a3a1dcebb74274461708fc214dcb262e1930329ca23313021
+            from: ghcr.io/vexxhost/python-base-ubuntu:2024.1@sha256:83de5c0cc717158dc2a6d8d3c48de031c0103f430bcb3757fcacfef87129d6dd
           - name: ubuntu-cloud-archive
             image-name: openstack-venv-builder-ubuntu-cloud-archive
-            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:2024.1@sha256:7d240b33a71dbe54270faa0d391e75a29108890489df6c73038739d66dc584db
+            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:2024.1@sha256:4765ca3ea1808723e073db4cec98c18259c520d52d7cfbf7ca56e019d402214d
           - name: ubuntu-cloud-archive-legacy
             image-name: openstack-venv-builder
             from: ghcr.io/vexxhost/python-base:2024.1@sha256:bc3d81f16ba1461788bfe53cd33d0e26bf18b0dc62de5b3576d3fcedef2644dd
           - name: debian
             image-name: openstack-venv-builder-debian
-            from: ghcr.io/vexxhost/python-base-debian:2024.1@sha256:e89903d62939a7cbe83032407fe9497ef22a19bf83eb8516d40da329ca97061d
+            from: ghcr.io/vexxhost/python-base-debian:2024.1@sha256:34338dba86afc2bcdb4904aba85dc321f6d06b29d3b57ec3e17fd6c51db735d8
           - name: rockylinux
             image-name: openstack-venv-builder-rockylinux
-            from: ghcr.io/vexxhost/python-base-rockylinux:2024.1@sha256:e0719e1aef0841701b0eefbff4a013e72346e9c3fa1e6010d726b06025bb84de
+            from: ghcr.io/vexxhost/python-base-rockylinux:2024.1@sha256:af96ad8f8d9995dd62b04fb4c70caa97b9941161911c9dd8cf4264bba7f5c693
           - name: almalinux
             image-name: openstack-venv-builder-almalinux
-            from: ghcr.io/vexxhost/python-base-almalinux:2024.1@sha256:3d44f36933efe12a6b58d74d9d1b1674fdcfbb791dd6eeb54ae5dd7ab30f244e
+            from: ghcr.io/vexxhost/python-base-almalinux:2024.1@sha256:2879805d0a6a658238baba4bc18fc00dad548a50420877af07a9ea721d69cd36
     permissions:
       contents: read
       id-token: write
