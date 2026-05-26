@@ -21,22 +21,22 @@ jobs:
         include:
           - name: ubuntu
             image-name: openstack-venv-builder-ubuntu
-            from: ghcr.io/vexxhost/python-base-ubuntu:main@sha256:a4c496ec66a177a381647d85abe8b9db2a478002a97f940ea82e3241f88bf98c
+            from: ghcr.io/vexxhost/python-base-ubuntu:main@sha256:c5fc796a92c272c7ca0878622216e74e2f491a47fda6ae0002cc91237625e90b
           - name: ubuntu-cloud-archive
             image-name: openstack-venv-builder-ubuntu-cloud-archive
-            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:main@sha256:99c29bc379d66eca976ff0c0399d393b48329aff51e8680807bc42fe675b54d9
+            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:main@sha256:92fbef3a665ec3638dff9ed4d2feb5fd339ee286edaa0d73f800dbafba28bcb7
           - name: ubuntu-cloud-archive-legacy
             image-name: openstack-venv-builder
             from: ghcr.io/vexxhost/python-base:main@sha256:474ed2701b9a439de7806e5a15c555b6f46cdeeb52e6d13208f758bf67bc4e83
           - name: debian
             image-name: openstack-venv-builder-debian
-            from: ghcr.io/vexxhost/python-base-debian:main@sha256:fed7c1b971dec78b1c7a3c00047f350cf28f2f393f55622bebe0d179e8153ba4
+            from: ghcr.io/vexxhost/python-base-debian:main@sha256:3e76e897e16aa3e762cc6dc894b8c5a0655f84e77456e322aa47381e17ef84e9
           - name: rockylinux
             image-name: openstack-venv-builder-rockylinux
-            from: ghcr.io/vexxhost/python-base-rockylinux:main@sha256:cd75c30ed9b4622962760c98b9b56d151b35b3238b425136e3a8169192a6683a
+            from: ghcr.io/vexxhost/python-base-rockylinux:main@sha256:4eb93e54b8e4eaad27b40afa7b792501e490fe21e250624d7e6fbda794ba6595
           - name: almalinux
             image-name: openstack-venv-builder-almalinux
-            from: ghcr.io/vexxhost/python-base-almalinux:main@sha256:969d458a508056eae2160fc2db260a06e7792d09f63956274e0c61069db8e659
+            from: ghcr.io/vexxhost/python-base-almalinux:main@sha256:505586232d06ef7fcbf006a70dbc9a698e6af5440a606db5372396ee5a2388dd
     permissions:
       contents: read
       id-token: write
