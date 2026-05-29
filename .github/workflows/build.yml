@@ -18,19 +18,19 @@ jobs:
         include:
           - name: ubuntu
             image-name: openstack-venv-builder-ubuntu
-            from: ghcr.io/vexxhost/python-base-ubuntu:2023.1@sha256:1e515d2d50e41bc19e9f7ea3986b2ea6d7755b4511c07a105bf8ee180158e798
+            from: ghcr.io/vexxhost/python-base-ubuntu:2023.1@sha256:39fd76bf288692122e9dddbe14c26d9d3abf63faa338e3764fe991cf16a295f9
           - name: ubuntu-cloud-archive
             image-name: openstack-venv-builder-ubuntu-cloud-archive
-            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:2023.1@sha256:2358864de75356c10b37cf523e7bf539c7c548b9e988c570524d9582cd49adbf
+            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:2023.1@sha256:197e14db911f720a25f0f499e09e17d57935c5273e6ca91fd64a231abe56369e
           - name: ubuntu-cloud-archive-legacy
             image-name: openstack-venv-builder
-            from: ghcr.io/vexxhost/python-base:2023.1@sha256:ca4a6324247befdbecbb55ccf8a043a15ee220432b3cee1c8fc4b0ef669953eb
+            from: ghcr.io/vexxhost/python-base:2023.1@sha256:903e1c87454d907534ef8b2907e819e645ec28329e97358d28ebcf57ef83734e
           - name: debian
             image-name: openstack-venv-builder-debian
-            from: ghcr.io/vexxhost/python-base-debian:2023.1@sha256:a5de616ea065c4f7ebf511c5306fbcf0a38e6cd2a6540551fac2be967e71dd45
+            from: ghcr.io/vexxhost/python-base-debian:2023.1@sha256:628c7f500e03ff60b1a35bbfeab5d43be0d72def83d051ce7d09d45b30abe3f4
           - name: rockylinux
             image-name: openstack-venv-builder-rockylinux
-            from: ghcr.io/vexxhost/python-base-rockylinux:2023.1@sha256:dcf255ea4db65e3ecd8750bebcb59782ce4f3a46551a1e1953b681629c731876
+            from: ghcr.io/vexxhost/python-base-rockylinux:2023.1@sha256:f4255367b9b1f4f82f74f85921804e8fb2be602dd03f80f43f32292f1d54fd15
           - name: almalinux
             image-name: openstack-venv-builder-almalinux
             from: ghcr.io/vexxhost/python-base-almalinux:2023.1@sha256:36a1381a4891f9e48ae6ab7eb409a3c356c17a18f28fc2240fe05215bdae17bf
