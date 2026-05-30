@@ -24,7 +24,7 @@ jobs:
             from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:2023.2@sha256:d1e420274d22e06f0c43e3fe52b58c9ec6c8c86125e72f0c34ff93c7e4357ffd
           - name: ubuntu-cloud-archive-legacy
             image-name: openstack-venv-builder
-            from: ghcr.io/vexxhost/python-base:2023.2@sha256:1a40bc04e79bc07a66e3308a83d51d876600162b78186ee0190d3b0ae04887c3
+            from: ghcr.io/vexxhost/python-base:2023.2@sha256:00838e8cf46a5c05d6c0982a236ad79bda64017a371e57bf78fa269223ab510f
           - name: debian
             image-name: openstack-venv-builder-debian
             from: ghcr.io/vexxhost/python-base-debian:2023.2@sha256:74b4f5aa5b239d4524689698041143fbe3098da9164721c44f0625c6715cf72a
