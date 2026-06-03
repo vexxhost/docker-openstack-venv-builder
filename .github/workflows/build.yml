@@ -18,19 +18,19 @@ jobs:
         include:
           - name: ubuntu
             image-name: openstack-venv-builder-ubuntu
-            from: ghcr.io/vexxhost/python-base-ubuntu:2023.1@sha256:099a3bf22d702769da385df4c5c18f6f56aa4aa1882b637049bf6868c4f52a19
+            from: ghcr.io/vexxhost/python-base-ubuntu:2023.1@sha256:cbef58aca0425be5889f19278a8bf892e44722983e4cc1c78173569147ac4455
           - name: ubuntu-cloud-archive
             image-name: openstack-venv-builder-ubuntu-cloud-archive
-            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:2023.1@sha256:bdf6111d08d94074233b67f495e41439d06319eb6cb3de921c0c3239a767bd1b
+            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:2023.1@sha256:fe68c3df0de5a9f7c424a276829fe9ea7230b08eeb956d9f12e0714038f556cf
           - name: ubuntu-cloud-archive-legacy
             image-name: openstack-venv-builder
-            from: ghcr.io/vexxhost/python-base:2023.1@sha256:4bfd9e30769a46162369ccd73520b277058647bb5ecb25649fc82fe852965756
+            from: ghcr.io/vexxhost/python-base:2023.1@sha256:696639d3afb47223bc0bf404a6a107d5c69924e84eee9aa7303db504579b3950
           - name: debian
             image-name: openstack-venv-builder-debian
-            from: ghcr.io/vexxhost/python-base-debian:2023.1@sha256:ec11215936a73e41554f685981951b0a833dd36429164c3b3fef8e5542e046f6
+            from: ghcr.io/vexxhost/python-base-debian:2023.1@sha256:6f24131c50645702b133f7c076fc5b6c2c4fb59709eb466435e0e5656b858611
           - name: rockylinux
             image-name: openstack-venv-builder-rockylinux
-            from: ghcr.io/vexxhost/python-base-rockylinux:2023.1@sha256:73859509075aaf754ce8d3c02a64bb835eb8726800cd67c197e3b0634a4ba290
+            from: ghcr.io/vexxhost/python-base-rockylinux:2023.1@sha256:83df0968767b1f8c32e5a71ba4103f971b0b884ceab15434dab794a17066ebd8
           - name: almalinux
             image-name: openstack-venv-builder-almalinux
             from: ghcr.io/vexxhost/python-base-almalinux:2023.1@sha256:07cf49e7de17186c58130548a0387e39993e0f5e70a2832c12d0c9b55edf6d08
