@@ -48,12 +48,12 @@ jobs:
         with:
           egress-policy: audit
 
-      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@0dcf370eb08b3f884992181348b8c41d7f66c10e # main
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@2244615e3b5ef56a6e83e993ede50ea9c3716cd7 # main
         with:
           repository: openstack/requirements
           ref: 655fcff9ab42f99367686b3d93a8ae1384c29801 # master
 
-      - uses: vexxhost/docker-atmosphere/.github/actions/build-image@0dcf370eb08b3f884992181348b8c41d7f66c10e # main
+      - uses: vexxhost/docker-atmosphere/.github/actions/build-image@2244615e3b5ef56a6e83e993ede50ea9c3716cd7 # main
         with:
           image-name: ${{ matrix.image-name }}
           build-contexts: requirements=openstack/requirements
