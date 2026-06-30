@@ -12,6 +12,19 @@ permissions:
   contents: read
 
 jobs:
+  tox:
+    name: tox (${{ matrix.project.repository }})
+    uses: vexxhost/docker-atmosphere/.github/workflows/tox.yml@5923a8fba3a98cf17e36583cc498d5e70a01c482 # main
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - repository: openstack/requirements
+            ref: 655fcff9ab42f99367686b3d93a8ae1384c29801 # master
+    with:
+      repository: ${{ matrix.project.repository }}
+      ref: ${{ matrix.project.ref }}
+
   image:
     name: ${{ matrix.name }}
     runs-on: ubuntu-latest
