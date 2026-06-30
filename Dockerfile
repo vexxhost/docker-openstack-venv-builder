@@ -10,6 +10,7 @@ sed -i '/glance_store/d' /upper-constraints.txt
 sed -i '/horizon/d' /upper-constraints.txt
 sed -i '/networking-generic-switch/d' /upper-constraints.txt
 sed -i '/tap-as-a-service/d' /upper-constraints.txt
+sed -i 's/^openstacksdk===.*/openstacksdk===4.14.0/' /upper-constraints.txt
 sed -i 's/^XStatic-Angular-Bootstrap===.*/XStatic-Angular-Bootstrap===2.5.0.1/' /upper-constraints.txt
 sed -i 's/^XStatic-Angular-FileUpload===.*/XStatic-Angular-FileUpload===12.2.13.2/' /upper-constraints.txt
 sed -i 's/^XStatic-Angular-Gettext===.*/XStatic-Angular-Gettext===2.4.1.1/' /upper-constraints.txt
