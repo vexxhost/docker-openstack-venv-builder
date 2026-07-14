@@ -40,12 +40,12 @@ jobs:
       packages: write
       pull-requests: write
     steps:
-      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@b35756699f2b0bf127417a05d0a7358d18920c94 # main
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@2b0040e59869e408a94f1e92e67fa47035c50336 # main
         with:
           repository: openstack/requirements
           ref: 29314ba6f30cb991027a3dcfabbed8d800827ad7 # stable/2025.1
 
-      - uses: vexxhost/docker-atmosphere/.github/actions/build-image@b35756699f2b0bf127417a05d0a7358d18920c94 # main
+      - uses: vexxhost/docker-atmosphere/.github/actions/build-image@2b0040e59869e408a94f1e92e67fa47035c50336 # main
         with:
           image-name: ${{ matrix.image-name }}
           build-contexts: requirements=openstack/requirements
