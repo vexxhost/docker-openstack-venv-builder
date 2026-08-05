@@ -41,6 +41,7 @@ sed -i 's/^XStatic-tv4===.*/XStatic-tv4===1.2.7.1/' /upper-constraints.txt
 EOF
 
 FROM ${FROM}
+ENV UV_INDEX=https://packages.vexxhost.com/pypi/openstack/simple/
 RUN --mount=type=bind,source=bindep.txt,target=/bindep.txt \
     --mount=type=bind,from=ghcr.io/vexxhost/build-utils:latest@sha256:6f0315fc694dfeeba7b40cdc1d1c690369efec8226b7abbe3981a6b61247e8bf,source=/bin,target=/build \
     /build/install-bindep-packages
