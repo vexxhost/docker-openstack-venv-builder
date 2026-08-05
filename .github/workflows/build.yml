@@ -42,12 +42,12 @@ jobs:
     steps:
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@e22141dfd5b75c4109fab95427441cfa762bc770 # main
         with:
-          repository: openstack/requirements
-          ref: 414ad2ac0867ee6cafd26d4240304ca379614d08 # stable/2025.1
+          repository: vexxhost/requirements
+          ref: 46ca386556b7bc2c24cbdc274ed24ef12a81ae18 # stable/2025.1
 
       - uses: vexxhost/docker-atmosphere/.github/actions/build-image@e22141dfd5b75c4109fab95427441cfa762bc770 # main
         with:
           image-name: ${{ matrix.image-name }}
-          build-contexts: requirements=openstack/requirements
+          build-contexts: requirements=vexxhost/requirements
           build-args: FROM=${{ matrix.from }}
           push: ${{ github.event_name != 'pull_request' }}
