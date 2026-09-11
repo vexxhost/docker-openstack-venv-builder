@@ -27,7 +27,7 @@ jobs:
             from: ghcr.io/vexxhost/python-base:zed@sha256:5f8fb63f869ebbad919800af231e56ec9ab9623a22cfe843c8ba0819c16571ee
           - name: debian
             image-name: openstack-venv-builder-debian
-            from: ghcr.io/vexxhost/python-base-debian:zed@sha256:5812f4272dbe0962cef33920c79f776d695977fb91dd285a346fc452c0b8cc63
+            from: ghcr.io/vexxhost/python-base-debian:zed@sha256:82fc237fe06237c29a2cd72c2d15f2cb9b4367594fd8b6153851c731a3bf3d2a
           - name: rockylinux
             image-name: openstack-venv-builder-rockylinux
             from: ghcr.io/vexxhost/python-base-rockylinux:zed@sha256:d1b7938ac95910b0a2af51f9aade9106282c941dacecbc5fedecdc724c0afe0d
