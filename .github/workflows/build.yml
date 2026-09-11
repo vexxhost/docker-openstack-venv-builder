@@ -27,7 +27,7 @@ jobs:
             from: ghcr.io/vexxhost/python-base:2023.1@sha256:3dfa6955f4ec1bb0ff6041c0947bcd60e691a2512d202b5bd586ae3d012a0608
           - name: debian
             image-name: openstack-venv-builder-debian
-            from: ghcr.io/vexxhost/python-base-debian:2023.1@sha256:c41030d0371678fabda2f6e591e976cb9d1e7845e40499116a53295655e31753
+            from: ghcr.io/vexxhost/python-base-debian:2023.1@sha256:ea4dce7243845870e20fb9cab84591ff000f2ae0930853dcd9eadb88642c4d70
           - name: rockylinux
             image-name: openstack-venv-builder-rockylinux
             from: ghcr.io/vexxhost/python-base-rockylinux:2023.1@sha256:3e6c521d32b6f6ce478ed1316a4740512f70365e95102936761dd4a29ea38339
@@ -43,7 +43,7 @@ jobs:
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@b6113e0668dc85929f783667f0347fc76b272844 # main
         with:
           repository: vexxhost/requirements
-          ref: 31bcfd2d865fb1a918ad2034612d8f4f22d83f3d # stable/2023.1
+          ref: f4cf7e0ebd73557eaa58ca1d07518fdd5515b36b # stable/2023.1
 
       - uses: vexxhost/docker-atmosphere/.github/actions/build-image@b6113e0668dc85929f783667f0347fc76b272844 # main
         with:
