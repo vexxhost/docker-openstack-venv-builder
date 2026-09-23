@@ -45,7 +45,7 @@ ENV UV_INDEX=https://packages.vexxhost.com/pypi/openstack/simple/
 RUN --mount=type=bind,source=bindep.txt,target=/bindep.txt \
     --mount=type=bind,from=ghcr.io/vexxhost/build-utils:latest@sha256:6f0315fc694dfeeba7b40cdc1d1c690369efec8226b7abbe3981a6b61247e8bf,source=/bin,target=/build \
     /build/install-bindep-packages
-COPY --from=ghcr.io/astral-sh/uv:latest@sha256:10787c682e4184e4f290de1171fd4703dc63de99221f10fe1c99002ce7fa9acc /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:latest@sha256:3adc3706091ce7c2fe595e669628caedd6d951551b92b258b7e7dbe06d9440bc /uv /uvx /bin/
 COPY --from=upper-constraints --link /upper-constraints.txt /upper-constraints.txt
 RUN <<EOF bash -xe
 uv venv --system-site-packages /var/lib/openstack
