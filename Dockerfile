@@ -42,7 +42,7 @@ EOF
 FROM ${FROM}
 ENV UV_INDEX=https://packages.vexxhost.com/pypi/openstack/simple/
 RUN --mount=type=bind,source=bindep.txt,target=/bindep.txt \
-    --mount=type=bind,from=ghcr.io/vexxhost/build-utils:latest@sha256:6f0315fc694dfeeba7b40cdc1d1c690369efec8226b7abbe3981a6b61247e8bf,source=/bin,target=/build \
+    --mount=type=bind,from=ghcr.io/vexxhost/build-utils:latest@sha256:f61678dc870ac787616ae8c963e1302df275ff15c9df43dc17de3723595256b5,source=/bin,target=/build \
     /build/install-bindep-packages
 COPY --from=ghcr.io/astral-sh/uv:latest@sha256:61d393e44e249f2e4b526b6c7ddcecce245946826e608e11c93ad4f5bba55b21 /uv /uvx /bin/
 COPY --from=upper-constraints --link /upper-constraints.txt /upper-constraints.txt
