@@ -21,22 +21,19 @@ jobs:
         include:
           - name: ubuntu
             image-name: openstack-venv-builder-ubuntu
-            from: ghcr.io/vexxhost/python-base-ubuntu:main@sha256:72f6f3311e5113c5b5fcf705ca1d9bdce64008b3f70b2220d314c8fcd868772f
-          - name: ubuntu-cloud-archive
-            image-name: openstack-venv-builder-ubuntu-cloud-archive
-            from: ghcr.io/vexxhost/python-base-ubuntu-cloud-archive:main@sha256:5a4663c89e5ed32721962405791ec1d6828d90226f198571e0c779a25261a134
-          - name: ubuntu-cloud-archive-legacy
+            from: ghcr.io/vexxhost/python-base-ubuntu:2026.2
+          - name: ubuntu-legacy
             image-name: openstack-venv-builder
-            from: ghcr.io/vexxhost/python-base:main@sha256:4b059ab6b98106cd89ff1f79ff388c2e00fed5d96375ce4fb9c4415fa65a71bc
+            from: ghcr.io/vexxhost/python-base:2026.2
           - name: debian
             image-name: openstack-venv-builder-debian
-            from: ghcr.io/vexxhost/python-base-debian:main@sha256:e77e2bd90b327b2dae1944ada7c7a48b8e4c9820d65ef9c602c5a1443b417075
+            from: ghcr.io/vexxhost/python-base-debian:2026.2
           - name: rockylinux
             image-name: openstack-venv-builder-rockylinux
-            from: ghcr.io/vexxhost/python-base-rockylinux:main@sha256:7cc75d93f74f2efbf28030859fefd41fb4448d9a90ace03193467c06955767ff
+            from: ghcr.io/vexxhost/python-base-rockylinux:2026.2
           - name: almalinux
             image-name: openstack-venv-builder-almalinux
-            from: ghcr.io/vexxhost/python-base-almalinux:main@sha256:7d3cfcc29678b5d71f9409e08b06f14d08040f99fa8282479c14e53512fea1f6
+            from: ghcr.io/vexxhost/python-base-almalinux:2026.2
     permissions:
       contents: read
       id-token: write
@@ -51,7 +48,7 @@ jobs:
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:
           repository: vexxhost/requirements
-          ref: 574a712d49c28bc00d8ddd06594bfce8d3bd9c44 # main
+          ref: bbeadfcdd6cd8ac9abf888661d3fc65fa45c7480 # stable/2026.2
 
       - uses: vexxhost/docker-atmosphere/.github/actions/build-image@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:
