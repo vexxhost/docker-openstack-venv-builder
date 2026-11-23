@@ -43,7 +43,7 @@ jobs:
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:
           repository: vexxhost/requirements
-          ref: 19a2152af08e1123ae00d040171ab88c50ed0128 # stable/2023.2
+          ref: b40dfe92f925ff8c300c0801b0407413999a889e # stable/2023.2
 
       - uses: vexxhost/docker-atmosphere/.github/actions/build-image@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:
